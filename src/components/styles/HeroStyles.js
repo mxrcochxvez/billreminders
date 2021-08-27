@@ -18,7 +18,7 @@ export const HeroContainer = styled.div`
 
 export const HeroInner = styled.div`
   margin-top: 30px;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFFFF, 0 0 40px #FFFFFF, 0 0 50px #FFFFFF, 0 0 60px #FFFFFF, 0 0 70px #FFFFFF;
+  text-shadow: 0 0 10px #fff1db, 0 0 20px #fff1db, 0 0 30px #fff1db, 0 0 40px #fff1db, 0 0 50px #fff1db, 0 0 60px #fff1db, 0 0 70px #fff1db;
 `
 
 export const HeroInnerTitle = styled.h1`
