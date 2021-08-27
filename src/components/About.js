@@ -1,12 +1,13 @@
 import React from 'react'
+import {AboutContainer, AboutMeContainer, AboutTitle, AboutTitleContainer} from "./styles/AboutStyles";
 
 export default function About() {
     return (
-        <div className="about_card" id="#about" style={{ paddingTop: '40px', fontSize: '1.5rem' }}>
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 0 }}>
-                <h1 style={{ textAlign: 'center', borderBottom: '5px solid white', width: '90%', paddingBottom: '10px', marginBottom: 0 }}>About me</h1>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', paddingLeft: '20px' }}>
+        <AboutContainer id="#about">
+            <AboutTitleContainer>
+                <AboutTitle>About me</AboutTitle>
+            </AboutTitleContainer>
+            <AboutMeContainer>
                 <p>I am a Software Developer based out of Fresno, CA. I work primarily with Frontend Frameworks and Libraries such as</p>
                 <ul style={{ margin: 0 }}>
                     <li>React</li>
@@ -28,7 +29,7 @@ export default function About() {
                     <li>Performing OTA updates to devices for testing.</li>
                     <li>Implementing new client features.</li>
                 </ul>
-            </div>
-        </div>
+            </AboutMeContainer>
+        </AboutContainer>
     )
 }
