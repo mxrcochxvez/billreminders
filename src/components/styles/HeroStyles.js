@@ -18,17 +18,18 @@ export const HeroContainer = styled.div`
 
 export const HeroInner = styled.div`
   margin-top: 30px;
-  padding: 5px 40px;
-
-  border-radius: 32px;
-  background: rgba(0,0,0,.4);
-  box-shadow: 5px 5px 15px rgba(0,0,0,.4);
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFFFF, 0 0 40px #FFFFFF, 0 0 50px #FFFFFF, 0 0 60px #FFFFFF, 0 0 70px #FFFFFF;
 `
 
-export const HeroInnerTitle = styled.h1``
+export const HeroInnerTitle = styled.h1`
+  font-size: 3em;
+  margin: 3rem 0 0 0;
+  color: #754800;
+`
 
 export const HeroDescription = styled.p`
   text-align: center;
+  color: #4d3800;
 `
 
 export const ScrollDown = styled.span`
