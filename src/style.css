@@ -1,5 +1,5 @@
 :root {
-    --white: #FFFFFF;
+    --white: #fff2fe;
     --black: #000000;
 }
 
@@ -25,9 +25,9 @@ body {
 }
 
 a, a:visited {
-    color: #cfedff;
+    color: #FFFFFF;
 }
 
 li {
-    color: #a8deff;
+    color: #FFF;
 }

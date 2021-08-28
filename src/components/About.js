@@ -1,11 +1,13 @@
 import React from 'react'
-import {AboutContainer, AboutMeContainer, AboutTitle, AboutTitleContainer} from "./styles/AboutStyles";
+import {AboutContainer, AboutMeContainer, AboutTitleContainer} from "./styles/AboutStyles";
+import SectionHeader from "./SectionHeader";
+import TabExperience from "./TabExperience";
 
 export default function About() {
     return (
         <AboutContainer id="#about">
             <AboutTitleContainer>
-                <AboutTitle>About me</AboutTitle>
+                <SectionHeader title="About Me" />
             </AboutTitleContainer>
             <AboutMeContainer>
                 <p>I am a Software Developer based out of Fresno, CA. I work primarily with Frontend Frameworks and Libraries such as</p>
@@ -22,14 +24,9 @@ export default function About() {
                     <li>Ant Design</li>
                     <li>Bootstrap</li>
                 </ul>
-                <p>I have worked professionally as a Contract Software Developer for nearly a year now at a company called <a href="https://ordrslip.com/" target="_blank" rel="noreferrer">OrdrSlip</a>.</p>
-                <p>As a Contract Software Developer I worked on various projects that involved both Python and JavaScript including</p>
-                <ul style={{ margin: 0 }}>
-                    <li>Updating component styles to meet design specs.</li>
-                    <li>Performing OTA updates to devices for testing.</li>
-                    <li>Implementing new client features.</li>
-                </ul>
             </AboutMeContainer>
+            <SectionHeader title="Experience" />
+            <TabExperience />
         </AboutContainer>
     )
 }

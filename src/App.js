@@ -1,14 +1,16 @@
 import React from 'react';
 import About from './components/About';
-import Hero from './components/Hero';
+import ContactMe from "./components/ContactMe";
+import ModernUpdate from "./components/ModernUpdate";
 
 function App() {
-  return (
-    <div>
-      <Hero />
-      <About />
-    </div>
-  );
+    return (
+        <div>
+            <ModernUpdate />
+            <About/>
+            <ContactMe />
+        </div>
+    );
 }
 
 export default App;
