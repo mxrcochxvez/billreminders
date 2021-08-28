@@ -1,6 +1,6 @@
 import React from 'react';
 import About from './components/About';
-import ContactMe from "./components/ContactMe";
+// import ContactMe from "./components/ContactMe";
 import ModernUpdate from "./components/ModernUpdate";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
         <div>
             <ModernUpdate />
             <About/>
-            <ContactMe />
+            {/*<ContactMe />*/}
         </div>
     );
 }
