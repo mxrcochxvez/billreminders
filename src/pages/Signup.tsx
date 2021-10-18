@@ -1,15 +1,8 @@
 import Input from "../layout/Input";
 import Section from "../layout/Section";
-import { gql, useMutation } from "@apollo/client";
+import { useMutation } from "@apollo/client";
 import { useState } from "react";
-
-const SIGNUP = gql`
-    mutation Signup($username: String!, $firstName: String!, $lastName: String!, $email: String!, $password: String!) {
-        createUser(username: $username, firstName: $firstName, lastName: $lastName, email: $email, password: $password) {
-            _id
-        }
-    }
-`
+import SIGNUP from '../components/constants/signup';
 
 export default function Signup() {
 
@@ -27,6 +20,7 @@ export default function Signup() {
     const submit = async () => {
         await signup({
             variables: {
+                username: userData.username,
                 firstName: userData.firstName,
                 lastName: userData.lastName,
                 email: userData.email,
@@ -36,7 +30,7 @@ export default function Signup() {
     }
 
     if (loading) return <p>Loading...</p>;
-    if (error) return <p>An error occurred</p>;
+    if (error) return <p>{error.message}</p>;
 
     return (
         <Section className="mt-12 mb-12">
