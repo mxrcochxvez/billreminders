@@ -1,16 +1,26 @@
-import Grab from "./components/Grab";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
 import Navbar from "./components/Navbar";
-import Signup from "./components/Signup";
-import Hero from "./layout/Hero";
+import Signup from "./pages/Signup";
+import Homepage from "./pages/Homepage";
+import NotFound from "./pages/404";
+import SignupFooter from "./components/SignupFooter";
 
 function App() {
   return (
-    <div>
+    <Router>
       <Navbar />
-      <Hero title="Stop forgetting about your bills." subtitle="Get notifications so you never miss a bill." />
-      <Grab />
-      <Signup />
-    </div>
+      <Switch>
+        <Route exact path="/" component={Homepage} />
+        <Route path="/signup" component={Signup} />
+        <Route component={NotFound} />
+      </Switch>
+      <SignupFooter />
+    </Router>
   );
 }
 
