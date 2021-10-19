@@ -7,7 +7,9 @@ export default function Navbar() {
                 <h1 className="text-2xl">Reminders</h1>
             </Link>
             <div>
-                <button className="bg-gray-100 p-2 rounded-md">Sign Up/Login</button>
+                <Link to="/signup">
+                    <button className="bg-gray-100 p-2 rounded-md">Sign Up/Login</button>
+                </Link>
             </div>
         </div>
     )
