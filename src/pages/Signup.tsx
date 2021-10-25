@@ -1,7 +1,7 @@
 import Input from "../layout/Input";
 import Section from "../layout/Section";
 import { useMutation } from "@apollo/client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SIGNUP from '../components/constants/signup';
 import { useHistory } from "react-router-dom";
 
@@ -20,6 +20,12 @@ function Signup() {
     // eslint-disable-next-line
     const [signup, { data, loading, error }] = useMutation(SIGNUP, { errorPolicy: "all" });
 
+    useEffect(() => {
+        if (data && data.createUser !== null) {
+            history.push({ pathname: "/", state: { status: true } });
+        }
+    }, [data, history])
+
     const submit = async () => {
         await signup({
             variables: {
@@ -30,8 +36,6 @@ function Signup() {
                 password: userData.password
             }
         })
-
-        history.push({ pathname: "/", state: { status: true } });
     }
 
     if (loading) return <p>Loading...</p>;
